@@ -39,14 +39,14 @@
     width: 800px;
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    border-radius: 5px;
     margin: 125px auto;
     margin-top: -400px;
     padding: 35px;
     max-width: 90%;
 }
 .wk-modal-head {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
     padding-bottom: 15px;
     text-align: center;
@@ -61,24 +61,27 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2);
 }
+.product-add-form .wk-calendar-table { border: 3px solid #ddd; min-height: 100%; }
 .wk-modal-foot {
     text-align: left;
     float: left;
-    padding: 20px 0;
+    padding: 20px 0 0;
     width: 100%;
 }
 .wk-modal-foot .booked-slot-summary {
-    max-height: 50px;
+    max-height: 56px;
     overflow: auto;
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    margin-top: 2px;
 }
 .wk-modal-foot .booked-slot-summary .booked-short-history {
     color: #000;
     display: inline-block;
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     width: auto;
     padding-right: 20px;
 }
@@ -92,14 +95,14 @@
     text-decoration: none;
 }
 .wk-modal-foot .booked-slot-summary .remove-slot:before {
-    background-color: #f1aba9;
+    background-color: #222;
     border-radius: 35px;
     color: #fff;
     content: "";
     font-family: "Fontawesome";
-    font-size: 13px;
+    font-size: 12px;
     font-weight: lighter;
-    padding: 2px 4px;
+    padding: 2px 5px;
 }
 .wk-modal-foot .wk-slots-summary-wrapper {
     margin-top: 10px;
@@ -107,14 +110,15 @@
     width: 100%;
 }
 .wk-modal-foot .slots-summary > label {
-    color: #a1a1a1;
-    font-size: 11px;
+    color: #000;
+    font-size: 13px;
     font-weight: 600;
 }
 .wk-modal-foot .slots-summary {
     display: inline-block;
     float: left;
     width: 80%;
+    padding-right: 10px;
 }
 .wk-modal-foot .slots-summary + .cart.button {
     float: right;
@@ -122,13 +126,14 @@
     width: 20%;
 }
 .wk-modal-foot .slots-summary + .cart.button .wk-book.action.tocart.primary {
-    background-color: #52b2b0;
-    border-color: #52b2b0;
+    background-color: #37ae52;
+    border-color: #37ae52;
     border-radius: 0;
     font-size: 15px;
     padding: 12px;
     text-align: center;
     text-transform: uppercase;
+    min-width: 112px;
 }
 .wk-col {
     float: left;
@@ -156,15 +161,15 @@
     padding-left: 4px;
 }
 .wk-col.middle .wk-label-avl-qty .wk-avl-text {
-    color: #98fefc;
+    color: #37ae52;
     font-size: 11px;
 }
 .wk-col.middle .wk-label-avl-qty .wk-avl-text + span {
-    color: #fff;
+    color: #333;
     font-size: 11px;
 }
 .wk-col.last .wk-booked-txt {
-    color: #fff;
+    color: #333;
     float: left;
     font-size: 10px;
     font-weight: 600;
@@ -176,16 +181,11 @@
 }
 .wk-col.last .wk-qty {
     display: inline-block;
-    float: left;
     margin-right: 0;
 }
 .wk-col.last .wk-confirm-qty {
-    /*font-size: 0;
-    color: #fff;*/
     display: none;
     cursor: pointer;
-
-    /*display: block;*/
     float: right;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -195,15 +195,6 @@
     border-radius: 3px;
     padding: 5px;
 }
-/*.wk-col.last .wk-confirm-qty::after {
-    content: "\f00c";
-    font-family: "Fontawesome";
-    font-size: 15px;
-    color: #8afc50;
-    padding-left: 4px;
-    float: left;
-    position: absolute;
-}*/
 .wk-col .wk-label-days {
     float: left;
     font-size: 35px;
@@ -223,7 +214,7 @@
     border-right: 1px solid #59c3c1;
 }
 .wk-col .wk-label-dates {
-    color: #fff;
+    color: #333;
     font-size: 12px;
     opacity: 0.8;
 }
@@ -246,7 +237,6 @@
     overflow: hidden;
 }
 .wk-day-container .wk-booking-table {
-    background-color: #52b2b0;
     height: 100%;
     padding: 15px;
 }
@@ -258,14 +248,14 @@
     float: left;
     width: 100%;
     position: relative;
-    padding: 15px 25px;
+    padding: 15px 20px;
 }
 .wk-booking-table-head {
     display: inline-block;
     float: left;
     width: 100%;
     font-weight: bold;
-    color: #fff;
+    color: #333;
 }
 .wk-booking-table-body {
     display: inline-block;
@@ -273,6 +263,8 @@
     width: 100%;
     max-height: 300px;
     overflow: auto;
+    border: 1px solid #ddd;
+    padding: 20px !important;
 }
 .wk-selected-date-wrapper {
     display: inline-block;
@@ -282,7 +274,7 @@
     float: left;
     width: 20%;
     display: inline-block;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
     line-height: 1;
     width: auto;
@@ -295,17 +287,19 @@
     font-size: 18px;
     font-weight: 400;
 }
+.wk-selected-date-wrapper .wk-selected-month-day .wk-month { font-size: 21px; }
 .wk-row {
-    border-bottom: 1px solid #59c3c1;
+    border-bottom: 1px dashed #ddd;
     display: inline-block;
     float: left;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
     width: 100%;
 }
 .wk-row.wk-many-row .wk-col.last {
     float: right;
     width: 40%;
+    text-align: right;
 }
 .wk-modal-foot .wk-notation-wrapper {
     display: inline-block;
@@ -315,10 +309,12 @@
 .wk-modal-foot .wk-notation-wrapper .noations-group {
     float: left;
 }
+.wk-modal-foot .wk-notation-wrapper .noations-group .notation-slots { padding-right: 10px; }
 .wk-modal-foot .wk-notation-wrapper .label {
     color: #000;
     font-size: 12px;
     font-weight: 600;
+    padding: 0 20px 5px 0px;
 }
 .wk-modal-foot .wk-notation-wrapper .label::after {
     content: " : ";
@@ -328,10 +324,9 @@
     float: left;
     font-size: 12px;
     font-weight: 600;
-    padding-left: 15px;
 }
 .wk-modal-foot .wk-notation-wrapper .available-slots::before {
-    background-color: #52b2b0;
+    background-color: #37ae52;
 }
 .wk-modal-foot .wk-notation-wrapper .not-available-slots::before {
     background-color: #ffb846;
@@ -342,10 +337,9 @@
 .wk-modal-foot .wk-notation-wrapper .notation-slots::before {
     content: "";
     display: inline-block;
-    height: 10px;
+    height: 12px;
     margin-right: 5px;
-    width: 13px;
-    margin-left: 10px;
+    width: 14px;
 }
 .wk-label {
     color: #666;
@@ -402,6 +396,7 @@
     height: 100%;
     padding: 3px 0;
     font-weight: bold;
+    min-width: 28px;
 }
 .wk-calendar-col {
     display: inline-block;
@@ -417,16 +412,16 @@
     width: 100%;
 }
 .wk-available-day {
-    color: #666666;
-    border-bottom: 2px solid #52b2b0;
+    color: #444;
+    border-bottom: 2px solid #37ae52;
 }
 .wk-available-day.booked-slot {
     border-color: red;
 }
 .wk-available-day.active {
-    background-color: #52b2b0;
+    background-color: #37ae52;
     color: #fff;
-    border-color: #52b2b0;
+    border-color: #37ae52;
 }
 .wk-available-day.slot-not-available {
     border-color: #ffb846;
@@ -449,7 +444,7 @@
     width: 100%;
 }
 .wk-calendar-head .wk-calendar-col {
-    color: #52b2b0;
+    color: #444;
     font-size: 12px;
     font-weight: 700;
     height: auto;
@@ -590,20 +585,20 @@
     display: inline-block;
 }
 .wk-close {
-    background: #da4f49 none repeat scroll 0 0;
-    border-radius: 2px;
+    background: #333;
+    border-radius: 24px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
-    height: 20px;
-    line-height: 8px;
+    height: 28px;
+    line-height: 17px;
     padding: 5px;
     position: absolute;
-    right: 7px;
-    top: 7px;
-    width: 20px;
+    right: -50px;
+    top: -50px;
+    width: 28px;
 }
 .wk-box-modal-bg {
     background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0;
@@ -623,10 +618,10 @@
     text-align: center;
 }
 .wk-col > input {
-    height: 25px;
+    height: 28px;
     padding: 0 5px;
     text-align: center;
-    width: 35px;
+    width: 38px;
 }
 @media screen and (max-width: 850px) {
     .wk-booking-table {
@@ -646,6 +641,7 @@
         width: 100%;
         display: inline-block;
     }
+    .wk-day-container .wk-booking-table { padding: 15px 0 0; }
 }
 @media screen and (max-width: 620px) {
     .wk-box-modal {
@@ -721,6 +717,7 @@
     .wk-box-modal {
         padding: 15px;
     }
+    .wk-close { right: -27px; top: -27px; }
 }
 @media screen and (max-width: 380px) {
     .wk-calendar-col {
@@ -734,6 +731,7 @@
     .wk-booking-table {
         padding: 15px;
     }
+    .wk-booking-table-body { padding: 15px !important; }
 }
 @media screen and (max-width: 320px) {
     .wk-booking-table {
